@@ -222,41 +222,41 @@ void drawRobotArm() {
 
 	// Back Face
 	glBegin(GL_LINE_LOOP);
-	glVertex3f(-0.8, 0.5, -0.25);
-	glVertex3f(-0.8, 0, -0.25);
-	glVertex3f(0, 0, -0.25);
-	glVertex3f(0, 0.5, -0.25);
+	glVertex3f(-0.8, 0.5, -0.5);
+	glVertex3f(-0.8, 0, -0.5);
+	glVertex3f(0, 0, -0.5);
+	glVertex3f(0, 0.5, -0.5);
 	glEnd();
 
 	// Top Face
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(-0.8, 0.5, 0);
 	glVertex3f(0, 0.5, 0);
-	glVertex3f(0, 0.5, -0.25);
-	glVertex3f(-0.8, 0.5, -0.25);
+	glVertex3f(0, 0.5, -0.5);
+	glVertex3f(-0.8, 0.5, -0.5);
 	glEnd();
 
 	// Bottom Face
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(0, 0, 0);
-	glVertex3f(0, 0, -0.25);
-	glVertex3f(-0.8, 0, -0.25);
+	glVertex3f(0, 0, -0.5);
+	glVertex3f(-0.8, 0, -0.5);
 	glVertex3f(-0.8, 0, 0);
 	glEnd();
 
 	// Left Side Face
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(-0.8, 0, 0);
-	glVertex3f(-0.8, 0, -0.25);
-	glVertex3f(-0.8, 0.5, -0.25);
+	glVertex3f(-0.8, 0, -0.5);
+	glVertex3f(-0.8, 0.5, -0.5);
 	glVertex3f(-0.8, 0.5, 0);
 	glEnd();
 
 	// Right Side Face
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(0, 0.5, 0);
-	glVertex3f(0, 0.5, -0.25);
-	glVertex3f(0, 0, -0.25);
+	glVertex3f(0, 0.5, -0.5);
+	glVertex3f(0, 0, -0.5);
 	glVertex3f(0, 0, 0);
 	glEnd();
 	//glPopMatrix();
@@ -277,24 +277,24 @@ void drawRobotArm() {
 	glBegin(GL_LINE_LOOP);
 	//lft Side Face
 	glVertex3f(0, 0.5, 0);
-	glVertex3f(0, 0.5, -0.25);
-	glVertex3f(0, 0, -0.25);
+	glVertex3f(0, 0.5, -0.5);
+	glVertex3f(0, 0, -0.5);
 	glVertex3f(0, 0, 0);
 	glEnd();
 
 	glBegin(GL_LINE_LOOP);
 	//Bottom Face
 	glVertex3f(0, 0, 0);
-	glVertex3f(0, 0, -0.25);
-	glVertex3f(0.8, 0, -0.25);
+	glVertex3f(0, 0, -0.5);
+	glVertex3f(0.8, 0, -0.5);
 	glVertex3f(0.8, 0, 0);
 	glEnd();
 
 	glBegin(GL_LINE_LOOP);
 	//rght Side Face
 	glVertex3f(0.8, 0, 0);
-	glVertex3f(0.8, 0, -0.25);
-	glVertex3f(0.8, 0.5, -0.25);
+	glVertex3f(0.8, 0, -0.5);
+	glVertex3f(0.8, 0.5, -0.5);
 	glVertex3f(0.8, 0.5, 0);
 	glEnd();
 
@@ -302,16 +302,16 @@ void drawRobotArm() {
 	//Top Face
 	glVertex3f(0.8, 0.5, 0);
 	glVertex3f(0, 0.5, 0);
-	glVertex3f(0, 0.5, -0.25);
-	glVertex3f(0.8, 0.5, -0.25);
+	glVertex3f(0, 0.5, -0.5);
+	glVertex3f(0.8, 0.5, -0.5);
 	glEnd();
 
 	glBegin(GL_LINE_LOOP);
 	//Back Face
-	glVertex3f(0.8, 0.5, -0.25);
-	glVertex3f(0.8, 0, -0.25);
-	glVertex3f(0, 0, -0.25);
-	glVertex3f(0, 0.5, -0.25);
+	glVertex3f(0.8, 0.5, -0.5);
+	glVertex3f(0.8, 0, -0.5);
+	glVertex3f(0, 0, -0.5);
+	glVertex3f(0, 0.5, -0.5);
 
 
 
@@ -330,12 +330,10 @@ void p4Demo() {
 	glClearColor(0, 0, 0, 0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_DEPTH_TEST);
-	glRotatef(0.1, x,y,z);
+	glRotatef(1, x,y,z);
 	drawCube(0.5, 0);
 	drawCube(-0.5, 0);
 
-	drawCube(-0.3, -0.6);
-	drawCube(0.3, 0.6);
 }
 
 
